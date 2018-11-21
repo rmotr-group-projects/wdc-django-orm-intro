@@ -17,9 +17,9 @@ You can now run the development server and point the browser to the correct URL:
 $ make runserver
 ```
 
-You will have a superuser already created (username: `admin`, password: `admin`) that you can use when you point to `http://localhost:8080/admin` in your browser with the server running. There you can find the Django admin site where you will be able to create, delete and modify objects from your database.
+You will have a superuser already created (username: `admin`, password: `admin`). To log in run the server and point your browser to `http://localhost:8080/admin`, (or on C9: `http://django-orm-relationships-<your c9 username>.c9users.io:8080/admin`. There you can find the Django admin site where you will be able to view, create, delete and modify objects from your database.
 
-The database already contains some objects that we have created for you, but feel free to interact with it the way you want.
+The database already contains some objects that we have created for you, but feel free to interact and have fun with it.
 
 ### Your Tasks
 
