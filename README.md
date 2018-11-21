@@ -23,8 +23,8 @@ The database already contains some objects that we have created for you, but fee
 
 ### Your Tasks
 
-For this practice you will work inside the `artists/orm_exercises.py` file. You'll find there a couple of functions that are the tasks you have to implement, using the different ORM methods that are provided by the Django `objects` manager.
-Each of the task has its instructions as a docstring, so use them as a guide to know what you have to do.
+For this practice you will work inside the `artists/orm_exercises.py` file where you'll find a series of functions that  you need to implement, using the different ORM methods that are provided by the Django `objects` manager.
+Each of the tasks has its instructions as a docstring, so use those and the tests as a guide to know what you have to do.
 
 In order to check if you implemented them correctly, there are tests associated to each task inside the `artists/tests.py`. You can run the tests like this:
 
