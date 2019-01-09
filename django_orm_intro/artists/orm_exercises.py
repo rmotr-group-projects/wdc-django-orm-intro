@@ -3,14 +3,12 @@ from artists.models import Artist, Song
 
 def task_1_artists_filter_by_popularity():
     """Should return all artists that have more than 80 popularity"""
-    artists_by_popularity = Artist.objects.filter(popularity__gt=80)
-    return artists_by_popularity
+    return Artist.objects.filter(popularity__gt=80)
 
 
 def task_2_artists_get_by_artistic_name():
     """Should return the artist which artistic name is Jimi Hendrix"""
-    artist_jimi = Artist.objects.get(artistic_name__iexact="Jimi Hendrix")
-    return artist_jimi
+    return Artist.objects.get(artistic_name__iexact="Jimi Hendrix")
 
 
 def task_3_songs_delete():
@@ -20,24 +18,22 @@ def task_3_songs_delete():
 
 def task_4_artists_create_song():
     """Should create a new song for B.B. King artist"""
-    artist = Artist.objects.get(artistic_name__iexact='B.B. King')
-    song = Song.objects.create()
-    artist.add(song)
+    artist = Artist.objects.get(artistic_name='B.B. King')
+    Song.objects.create(artist_id=artist.id, title='Let the good times roll', album_name='Legends of Rock n Roll')
 
 
 def task_5_artists_order_by_popularity():
     """Should return all artists ordered by popularity"""
-    artists = Artist.objects.all().order_by('popularity')
-    return artists
+    return Artist.objects.all().order_by('popularity')
 
 
-def task_6_song_edit_album(title='Superstition'):
+def task_6_song_edit_album():
     """Should take the song with title 'Superstition' and update its album name with any other name"""
-    song = Song.objects.filter(title=title)
-    song.album_name = "Supervision"
+    song = Song.objects.filter(title='Superstition')
+    song.album_name = "Full moon"
+    song.save()
 
 
 def task_7_song_counter():
     """Should return the amount of songs stored in the database"""
-    num_songs = Song.objects.all().count()
-    return num_songs
+    return Song.objects.count()
