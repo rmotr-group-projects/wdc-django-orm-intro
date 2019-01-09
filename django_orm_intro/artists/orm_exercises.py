@@ -8,7 +8,7 @@ def task_1_artists_filter_by_popularity():
 
 def task_2_artists_get_by_artistic_name():
     """Should return the artist which artistic name is Jimi Hendrix"""
-    return Artist.objects.get(artistic_name__iexact="Jimi Hendrix")
+    return Artist.objects.get(artistic_name="Jimi Hendrix")
 
 
 def task_3_songs_delete():
@@ -29,7 +29,7 @@ def task_5_artists_order_by_popularity():
 
 def task_6_song_edit_album():
     """Should take the song with title 'Superstition' and update its album name with any other name"""
-    song = Song.objects.filter(title='Superstition')
+    song = Song.objects.get(title='Superstition')
     song.album_name = "Full moon"
     song.save()
 
