@@ -22,12 +22,14 @@ class ORMExerciesTestCase(TestCase):
         filtered_artists_popularity = [a.popularity for a in filtered_artists]
         assert filtered_artists_popularity == [90]
 
+
     def test_task_2_artists_get_by_artistic_name(self):
         """Should return the artist which artistic name is Jimi Hendrix"""
         assert Artist.objects.get(artistic_name='Jimi Hendrix')
 
         artist = task_2_artists_get_by_artistic_name()
         assert artist.artistic_name == 'Jimi Hendrix'
+
 
     def test_task_3_songs_delete(self):
         """Should delete all songs that contain any letter 'a' in its title"""
@@ -40,6 +42,7 @@ class ORMExerciesTestCase(TestCase):
         assert Song.objects.count() == 1
         assert 't' not in Song.objects.all()[0].title
 
+
     def test_task_4_artists_create_song(self):
         """Should create a new song for B.B. King artist"""
         # preconditions
@@ -51,12 +54,14 @@ class ORMExerciesTestCase(TestCase):
         # postconditions
         assert Song.objects.filter(artist_id=artist.id).count() == 2
 
+
     def test_task_5_artists_order_by_popularity(self):
         """Should return all artists ordered by popularity"""
         artists = task_5_artists_order_by_popularity()
         assert artists[0].popularity == 75
         assert artists[1].popularity == 80
         assert artists[2].popularity == 90
+
 
     def test_task_6_song_edit_album(self):
         """Should take the song with title 'Superstition' and update its album name with any other name"""
@@ -69,6 +74,7 @@ class ORMExerciesTestCase(TestCase):
         # postconditions
         song = Song.objects.get(title='Superstition')
         assert song.album_name != 'Talking book'
+
 
     def test_task_7_song_counter(self):
         """Should return the amount of songs stored in the database"""
