@@ -1,0 +1,18 @@
+Test is different, you use:
+
+make test
+
+
+# how does it find artists/tests.py ???
+
+The only thing to modify was artists/orm_exercises.py ???
+
+
+
+The only URL is admin.
+
+You can go through admin and delete artists, add artists, etc.
+
+You can sort by multiple columns.
+
+You can also check "users."
