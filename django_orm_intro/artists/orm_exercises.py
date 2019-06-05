@@ -1,5 +1,4 @@
 from artists.models import Artist, Song
-from django.http import HttpResponse
 
 
 def task_1_artists_filter_by_popularity():
