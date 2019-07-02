@@ -13,17 +13,13 @@ def task_2_artists_get_by_artistic_name():
 
 def task_3_songs_delete():
     """Should delete all songs that contain any letter 't' in its title"""
-    Artist.objects.filter(title__icontains='t')
+    Artist.objects.filter(title__icontains='t').delete()
 
 
 def task_4_artists_create_song():
     """Should create a new song for B.B. King artist"""
-    bb_king_id = Artist.objects.get(artistic_name='B.B. King')
-    Song.objects.create(
-        artist=bb_king_id.id,
-        title="Hold me down",
-        album_name="Hold my river"
-        )
+    bb_king = Artist.objects.get(artistic_name='B.B. King')
+    Song.objects.create(artist_id=bb_king.id, title="Hold me down", album_name="Hold my river")
 
 
 def task_5_artists_order_by_popularity():
