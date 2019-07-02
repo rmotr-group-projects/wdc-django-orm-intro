@@ -13,7 +13,7 @@ def task_2_artists_get_by_artistic_name():
 
 def task_3_songs_delete():
     """Should delete all songs that contain any letter 't' in its title"""
-    Artist.objects.filter(title__icontains='t').delete()
+    Song.objects.filter(title__icontains='t').delete()
 
 
 def task_4_artists_create_song():
