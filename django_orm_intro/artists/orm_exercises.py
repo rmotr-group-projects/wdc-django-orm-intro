@@ -25,8 +25,8 @@ def task_3_songs_delete():
 def task_4_artists_create_song():
     """Should create a new song for B.B. King artist"""
     artist = Artist.objects.get(artistic_name='B.B. King')
-
     Song.objects.create(artist_id=artist.id)
+    return None
     
 
 def task_5_artists_order_by_popularity():
@@ -40,6 +40,7 @@ def task_6_song_edit_album():
     song = Song.objects.get(title='Superstition')
     song.album_name = 'stuff'
     song.save()
+    return None
 
 
 
